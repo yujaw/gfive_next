@@ -41,6 +41,17 @@ const Footer = () => {
                         </div>
                         <div className="footer_items">
                             <div className="title">
+                                Services
+                            </div>
+                            <div className="nav">
+                                <Link href='products' className="links">Desktop</Link>
+                                <Link href='products' className="links">Laptop</Link>
+                                <Link href='products' className="links">Printers</Link>
+                                <Link href='products' className="links">Accessories</Link>
+                            </div>
+                        </div>
+                        <div className="footer_items">
+                            <div className="title">
                                 Social
                             </div>
                             <div className="nav">
@@ -73,7 +84,7 @@ const Footer = () => {
                     </div>
                     <div className="footer_bottom">
                         <div className="text">
-                            &copy; {date} GFive Pvt. Ltd.
+                            &copy; {date} G-Five Pvt. Ltd.
                         </div>
                     </div>
                 </div>

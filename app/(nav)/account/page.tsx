@@ -108,9 +108,11 @@ const AccountInfo = () => {
                                 />
                             </div>
                         </div>
-                        <div className='button'>
-                            <button type='button' className='secondary' onClick={handleReset}>Reset</button>
-                            <button type='submit' className='primary'>Save</button>
+                        <div className='button-container'>
+                            <div className="button">
+                                <button className='secondary'>Reset</button>
+                                <button className='primary'>Save</button>
+                            </div>
                         </div>
                     </div>
                 </form>

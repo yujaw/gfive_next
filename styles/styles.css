@@ -1,8 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 @import url("https://db.onlinewebfonts.com/c/cc5ff80d2d1b0b7c077eefae61d02261?family=Value+Serif+Pro");
-@import url("https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -511,8 +507,9 @@ img {
     margin: 0.5em 0 0 0;
   }
   body .features .category .desc span {
-    font-size: 0.8em;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
   }
   body .store_banner {
     width: 100%;
@@ -789,13 +786,13 @@ img {
             user-select: none;
   }
   body .footer {
-    background-color: #061621;
+    background-color: rgb(10, 22, 32);
     width: 100%;
-    height: calc(100vh - 5rem);
-    padding: 3rem 10rem;
+    height: calc(80vh - 4rem);
+    padding: 2.5rem;
   }
   body .footer .footer_cont {
-    padding: 0.5rem;
+    padding: 1.5rem;
     height: 100%;
     display: flex;
     align-items: center;
@@ -804,49 +801,50 @@ img {
   }
   body .footer .footer_cont .footer_nav {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
     grid-gap: 2rem;
     grid-template-rows: minmax(auto, auto);
   }
   body .footer .footer_cont .footer_nav .footer_items .footer_logo {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
     padding: 1rem;
   }
   body .footer .footer_cont .footer_nav .footer_items .footer_logo img {
-    width: 78%;
+    width: 40%;
   }
   body .footer .footer_cont .footer_nav .footer_items .title {
     color: white;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    letter-spacing: 0.02rem;
-    margin: 1.2rem 0 1rem 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    margin: 0rem 0 1rem 0;
   }
   body .footer .footer_cont .footer_nav .footer_items .nav {
     display: flex;
     flex-direction: column;
+    gap: 0.3rem;
   }
   body .footer .footer_cont .footer_nav .footer_items .nav a {
-    color: white;
-    font-size: 0.8rem;
+    color: rgb(191, 191, 191);
+    font-size: 0.75rem;
     font-weight: 400;
-    margin: 1.2rem 0;
-    letter-spacing: 0.01rem;
+    margin: 1rem 0;
     display: flex;
     align-items: center;
     transition: 0.2s ease;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   body .footer .footer_cont .footer_nav .footer_items .nav a svg {
-    fill: white;
+    fill: rgb(191, 191, 191);
     line-height: 0.9rem;
     margin: 0 0.5rem 0 0;
     transition: 0.2s ease;
     aspect-ratio: 1;
   }
   body .footer .footer_cont .footer_nav .footer_items .nav a:hover {
-    color: #00ed64;
-  }
-  body .footer .footer_cont .footer_nav .footer_items .nav a:hover svg {
-    fill: #00ed64;
+    text-decoration: underline;
   }
   body .footer .footer_cont .footer_bottom {
     height: 2rem;
@@ -856,7 +854,8 @@ img {
   }
   body .footer .footer_cont .footer_bottom .text {
     color: #b8c4c2;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
+    font-family: "Courier New", Courier, monospace;
   }
   body .contact_container {
     width: 100%;
@@ -876,7 +875,7 @@ img {
     align-items: center;
     justify-content: space-between;
     padding: 1.5rem;
-    background: url("@/public/images/grayBackground.svg");
+    background-color: #efefef;
     background-size: 6px;
     border: 0.2rem solid black;
   }
@@ -1217,6 +1216,8 @@ img {
   }
   body .product-page-container .product .preview .product-image-swiper {
     width: 100%;
+    height: 100%;
+    overflow: hidden;
     aspect-ratio: 1;
   }
   body .product-page-container .product .preview .product-image-swiper .swiper-wrapper {
@@ -1229,7 +1230,7 @@ img {
     justify-content: center;
   }
   body .product-page-container .product .preview .product-image-swiper .swiper-wrapper .swiper-slide img {
-    width: 75%;
+    width: 70%;
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
@@ -1843,11 +1844,11 @@ img {
     transition: 0.3s ease;
   }
   body .product-page-container .description-wrapper .description .review-container .content .rating-container .item .desc .title .edit:hover {
-    color: #001e2b;
+    color: rgb(10, 22, 32);
   }
   body .product-page-container .description-wrapper .description .review-container .content .rating-container .item .desc .title .edit:hover::after {
     width: 0%;
-    background-color: #001e2b;
+    background-color: rgb(10, 22, 32);
   }
   body .product-page-container .description-wrapper .description .review-container .content .rating-container .item .desc .cont {
     font-weight: 400;
@@ -1890,7 +1891,7 @@ img {
     padding: 2.5em 2.5em 1em 2.5em;
   }
   body .product-details .title {
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
   }
@@ -1919,7 +1920,7 @@ img {
     padding: 1em 2.5em 0 2.5em;
   }
   body .feedback-container .customer-ratings .title {
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
   }
@@ -2010,7 +2011,7 @@ img {
     margin: 0 0 1em 0;
   }
   body .feedback-container .customer-reviews .title {
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 1.3rem;
     font-weight: 600;
   }
@@ -2155,24 +2156,25 @@ img {
   }
   body .account-container {
     width: 100%;
-    padding: 3em 0;
+    height: calc(100vh - 4.5rem);
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
   body .account-container .account {
+    width: 90%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    width: 90%;
-    background: url("@/public/images/grayBackground.svg");
+    justify-content: space-between;
+    background-color: #efefef;
     background-size: 6px;
     border: 0.2rem solid black;
-    padding: 1.3em 0;
+    padding: 2rem;
+    gap: 2rem;
   }
   body .account-container .account .account-navigation {
-    width: 32.5%;
-    padding: 1.5em 1em 1em 1em;
+    width: 35%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2186,7 +2188,7 @@ img {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0 0 0.75em 0;
+    margin-bottom: 1rem;
   }
   body .account-container .account .account-navigation .nav-profile .image-container {
     display: flex;
@@ -2232,9 +2234,9 @@ img {
     filter: opacity(70%);
   }
   body .account-container .account .account-navigation .nav-profile .name {
-    margin: 1em 0 0 0;
+    margin: 1rem 0 0 0;
     font-size: 1.2em;
-    font-weight: 700;
+    font-weight: 500;
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
@@ -2250,6 +2252,7 @@ img {
     width: 100%;
     border: 1px solid #00684a;
     border-radius: 2rem;
+    font-size: 0.8rem;
     font-weight: 500;
     cursor: pointer;
     transition: 0.2s ease;
@@ -2293,15 +2296,15 @@ img {
     color: white;
   }
   body .account-container .account .account-desc {
-    width: 60%;
+    width: 65%;
     background: white;
     border: 0.2rem solid black;
     position: relative;
   }
   body .account-container .account .account-desc .title {
-    font-size: 1.2em;
-    font-weight: 700;
-    font-family: "Value Serif Pro";
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
     color: #061621;
   }
   body .account-container .account .account-desc .header {
@@ -2352,8 +2355,20 @@ img {
     height: 100%;
   }
   body .account-container .account .account-desc .wish_cont .empty span {
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 2rem;
+    font-weight: 500;
+    position: relative;
+  }
+  body .account-container .account .account-desc .wish_cont .empty span::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    translate: -50% 0;
+    width: 50%;
+    height: 0.2rem;
+    background-color: #13aa52;
   }
   body .account-container .account .account-desc .wish_cont::-webkit-scrollbar {
     width: 0.25em;
@@ -2373,21 +2388,24 @@ img {
     padding: 1rem;
   }
   body .account-container .account .account-desc .container .sub_container .title {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight: 700;
   }
   body .account-container .account .account-desc .container .sub_container .items {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
   }
   body .account-container .account .account-desc .container .sub_container .items input {
-    font-weight: 600;
-    padding: 1em 1.1em;
-    margin: 0.5rem;
+    aspect-ratio: 16/2;
+    padding: 0 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
     outline: none;
+    border: 0.18rem solid black;
     background: #efefef;
-    border: 0.2rem solid black;
     transition: 0.2s ease;
   }
   body .account-container .account .account-desc .container .sub_container .items input::-webkit-input-placeholder {
@@ -2456,7 +2474,7 @@ img {
     font-size: 0.9em;
     font-weight: 500;
     width: 50%;
-    border-radius: 0.2em;
+    border-radius: 0;
     transition: 0.2s ease;
     aspect-ratio: 3.6/1;
   }
@@ -2470,34 +2488,42 @@ img {
   body .account-container .account .account-desc .container .wish-wrapper .wish_container .desc .buttons .secondary {
     border: 1px solid #00684a;
   }
-  body .account-container .account .account-desc .container .button {
+  body .account-container .account .account-desc .container .button-container {
     width: 100%;
     display: grid;
     place-items: center;
     grid-template-columns: 1fr 1fr;
-    margin: 1.5em 0 0 0;
+    margin-top: 1.5rem;
   }
-  body .account-container .account .account-desc .container .button button {
+  body .account-container .account .account-desc .container .button-container .button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-column: 2;
+    gap: 0.5rem;
+  }
+  body .account-container .account .account-desc .container .button-container .button button {
+    width: 100%;
     aspect-ratio: 4/1;
     display: grid;
     align-items: center;
     justify-content: space-evenly;
     text-transform: capitalize;
-    font-size: 1rem;
+    font-size: 0.85rem;
     font-weight: 500;
-    height: 4rem;
-    border-radius: 0.2em;
-    border: 0.2rem solid black;
-    transition: 150ms ease;
+    border-radius: 0;
+    transition: 0.3s ease-out;
     cursor: pointer;
     -webkit-user-select: none;
        -moz-user-select: none;
             user-select: none;
+    border: 0.18rem solid black;
   }
-  body .account-container .account .account-desc .container .button button:hover {
-    border-radius: 2em;
+  body .account-container .account .account-desc .container .button-container .button button:hover {
+    border-radius: 4rem;
   }
-  body .account-container .account .account-desc .container .button .primary {
+  body .account-container .account .account-desc .container .button-container .button .primary {
     background: #00ed64;
   }
   body .cart-overlay {
@@ -2907,7 +2933,7 @@ img {
     flex-direction: column;
   }
   body .signup .signup_container .container .signup_form .input_container .desc {
-    color: #001e2b;
+    color: rgb(10, 22, 32);
     font-size: 0.775rem;
     font-weight: 700;
   }
@@ -2939,7 +2965,7 @@ img {
   body .signup .signup_container .container .signup_form .terms_container .desc {
     font-size: 0.8rem;
     font-weight: 500;
-    color: #001e2b;
+    color: rgb(10, 22, 32);
   }
   body .signup .signup_container .container .signup_form .terms_container .desc a {
     font-weight: 400;
@@ -3083,7 +3109,7 @@ img {
     flex-direction: column;
   }
   body .signin .signin_container .container .signin_form .input_container .desc {
-    color: #001e2b;
+    color: rgb(10, 22, 32);
     font-size: 0.775rem;
     font-weight: 700;
   }
@@ -3249,7 +3275,7 @@ img {
     justify-content: center;
   }
   body .products_container .product_grid_container .top_nav .sort .flow svg {
-    fill: #001e2b;
+    fill: rgb(10, 22, 32);
   }
   body .products_container .product_grid_container .top_nav .sort .flow:hover {
     border-radius: 0.2rem;
@@ -3371,10 +3397,7 @@ img {
     cursor: auto;
     width: 100%;
     height: 40%;
-    font-size: 1.1 rem;
-    font-weight: 500;
     text-align: left;
-    margin: 0 0.25em;
     display: flex;
     align-items: flex-start;
     pointer-events: none;
@@ -3383,6 +3406,9 @@ img {
     color: black;
     cursor: pointer;
     pointer-events: all;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Value Serif Pro";
   }
   body .products_container .product_grid_container .products .card .product .contents .more {
     width: 100%;
@@ -3396,9 +3422,9 @@ img {
     width: 100%;
   }
   body .products_container .product_grid_container .products .card .product .contents .more .ratings span svg {
-    height: 1rem;
-    width: 1rem;
-    margin: 0 0.5rem 0 0;
+    height: 0.8rem;
+    width: 0.8rem;
+    margin: 0 0.3rem 0 0;
   }
   body .products_container .product_grid_container .products .card .product .contents .more .ratings .selected {
     fill: #061621;
@@ -3408,11 +3434,12 @@ img {
   }
   body .products_container .product_grid_container .products .card .product .contents .more .price {
     width: 100%;
-    font-size: 0.975em;
+    font-size: 0.9rem;
     font-weight: 600;
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+    font-family: "Courier New", Courier, monospace;
   }
   body .products_container .product_grid_container .products .card .product .contents .more .buy {
     width: 100%;
@@ -3492,7 +3519,7 @@ img {
   }
   body .products_container .sidenav .title {
     font-size: 1rem;
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     padding: 0.5rem;
   }
@@ -3503,7 +3530,7 @@ img {
   }
   body .products_container .sidenav .component .sub_title {
     font-size: 0.85rem;
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-weight: 500;
     margin: 0.5em;
   }
@@ -3523,14 +3550,14 @@ img {
     align-items: center;
     justify-content: center;
     margin-bottom: 0.5rem;
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   }
   body .products_container .sidenav .component .cont {
     margin: 0.25rem 0.75rem;
   }
   body .products_container .sidenav .component .cont .items {
     font-size: 0.7rem;
-    font-family: "Poppins", sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     display: flex;
     align-items: center;
     font-weight: 400;
@@ -4093,7 +4120,6 @@ img {
     height: 100%;
     padding: 1rem 1.5rem;
     border-radius: 1em;
-    background: #061621;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -4496,7 +4522,7 @@ img {
             user-select: none;
   }
   body .product-page-container .product .preview .swiper-nav .nav svg {
-    fill: #001e2b;
+    fill: rgb(10, 22, 32);
   }
   body .product-page-container .product .preview .swiper-nav .product-image-thumb-swiper {
     height: 100%;
@@ -5500,7 +5526,7 @@ img {
     flex-direction: column;
   }
   body .signin .signin_container .container .signin_form .input_container .desc {
-    color: #001e2b;
+    color: rgb(10, 22, 32);
     font-size: 1.2rem;
     font-weight: 700;
   }
@@ -5670,7 +5696,7 @@ img {
     flex-direction: column;
   }
   body .signup .signup_container .container .signup_form .input_container .desc {
-    color: #001e2b;
+    color: rgb(10, 22, 32);
     font-size: 1.3rem;
     font-weight: 700;
   }
@@ -5697,7 +5723,7 @@ img {
   body .signup .signup_container .container .signup_form .terms_container .desc {
     font-size: 1.3rem;
     font-weight: 500;
-    color: #001e2b;
+    color: rgb(10, 22, 32);
   }
   body .signup .signup_container .container .signup_form .terms_container .desc a {
     font-size: 1.3rem;
@@ -5801,7 +5827,7 @@ img {
     justify-content: center;
   }
   body .products_container .product_grid_container .top_nav .sort .flow svg {
-    fill: #001e2b;
+    fill: rgb(10, 22, 32);
   }
   body .products_container .product_grid_container .products {
     display: grid;

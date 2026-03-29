@@ -38,9 +38,11 @@ const ShippingInfo = () => {
                             <input type='text' placeholder='card no.' className='card_reg' value='55400' readOnly />
                         </div>
                     </div>
-                    <div className='button'>
-                        <button className='secondary'>Reset</button>
-                        <button className='primary'>Save</button>
+                    <div className='button-container'>
+                        <div className="button">
+                            <button className='secondary'>Reset</button>
+                            <button className='primary'>Save</button>
+                        </div>
                     </div>
                 </div>
             </div>

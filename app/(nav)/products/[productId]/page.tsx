@@ -1,5 +1,5 @@
 import Product from '@/components/Product'
 
-export default function Page() {
-  return <Product />
+export default async function Page() {
+    return <Product />
 }

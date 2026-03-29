@@ -14,6 +14,7 @@ import Description from '@/components/ProductDescription'
 import { API_URL } from '@/utilities/constants'
 import formatCurrency from '@/utilities/formatCurrency'
 import { useParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 interface ProductInterface {
     name: string,
@@ -22,18 +23,23 @@ interface ProductInterface {
     images: string[]
 }
 
-const Product = async () => {
+const Product = () => {
 
     const { increaseCartQuantity } = useShoppingCart()
     const { productId }: { productId: string } = useParams()
     const { toggleFav, favItems } = useFavourites()
+    const [product, setProduct] = useState<ProductInterface>()
+    const router = useRouter()
 
     const [productImage, setProductImage] = useState<SwiperType | null>(null)
 
-    const res = await axios.get(`/api/products/${productId}`)
-    const product = res.data
-
-    if (!product) return null
+    useEffect(() => {
+        const fetch = async () => {
+            const res = await axios.get(`/api/products/${productId}`)
+            setProduct(res.data)
+        }
+        fetch()
+    }, [])
 
     return (
         <Fragment>
@@ -90,7 +96,7 @@ const Product = async () => {
                                 <Rating
                                     className="ratings"
                                     defaultValue={product?.rating}
-                                    value={Math.round(product?.rating)}
+                                    value={Math.round(product?.rating ?? 0)}
                                     precision={0.5}
                                     icon={<FaStar className='icon selected' />}
                                     emptyIcon={<FaStar className='icon unselected' />}
@@ -98,9 +104,9 @@ const Product = async () => {
                                 />
                             </div>
                         </div>
-                        <div className='price'>{formatCurrency(product?.price)}</div>
+                        <div className='price'>{formatCurrency(product?.price ?? 0)}</div>
                         <div className='checkouts'>
-                            <button type='submit' className='buy primary' onClick={() => increaseCartQuantity(productId, product?.price)}>
+                            <button type='submit' className='buy primary' onClick={() => increaseCartQuantity(productId, product?.price ?? 0)}>
                                 Add to Cart
                             </button>
                             <button className='wish' onClick={() => toggleFav(productId)}>

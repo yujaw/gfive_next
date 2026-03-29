@@ -44,7 +44,7 @@ const CardNav = () => {
                                 ))
                             }
                             {
-                                chip?.length <= 0 &&
+                                chip?.length > 0 &&
                                 (
                                     <button className="chip primary" onClick={clearChip}>
                                         Clear All

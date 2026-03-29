@@ -106,9 +106,6 @@ const ProductPage = () => {
                 setTotalPages(1);
                 setAvailableBrands([]);
             }
-            // finally {
-            //     setIsProductLoading(false);
-            // }
         };
 
         fetchProducts();
